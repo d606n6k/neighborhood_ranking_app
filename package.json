@@ -1,0 +1,26 @@
+{
+  "name": "neighborhood_ranking_app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "eslint": "^7.25.0",
+    "prettier": "^2.2.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/d606n6k/neighborhood_ranking_app.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/d606n6k/neighborhood_ranking_app/issues"
+  },
+  "homepage": "https://github.com/d606n6k/neighborhood_ranking_app#readme"
+}
