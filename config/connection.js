@@ -1,5 +1,5 @@
 const Sequelize = require("sequelize");
-
+require("dotenv").config();
 // create connection to the db. Connect to JWASDB instance if env var provided.
 // (Heroku creates this variable when you provision a JAWSDB instance.)
 let sequelize;
