@@ -23,7 +23,7 @@ Neighborhood.init(
     timestamps: false,
     freezeTableName: true,
     underscored: true,
-    modelName: "User",
+    modelName: "neighborhood",
   }
 );
 
