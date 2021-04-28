@@ -21,4 +21,4 @@ Review.belongsTo(Neighborhood, {
   foreignKey: "neighborhood_id",
 });
 
-module.exports = { User };
+module.exports = { User, Neighborhood, Review };
