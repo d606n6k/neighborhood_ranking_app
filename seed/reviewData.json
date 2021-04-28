@@ -1,0 +1,27 @@
+[
+    {
+        "content": "People parking in front of my driveway are going to hell!",
+        "user_id": 1,
+        "neighborhood_id": 1,
+        "rating": 1
+    },
+    {
+        "content": "Moved in here, last month. All peaceful except the neighbor dogs are grumpy and loud specifically during weekends.",
+        "user_id": 2,
+        "neighborhood_id": 1,
+        "rating": 3
+    },
+    {
+        "content": "Public park nearby, good for recreational activities.",
+        "user_id": 3,
+        "neighborhood_id": 2,
+        "rating": 5
+    },
+    {
+        "content": "Neighbors are friendly, no unnecessary dramas or loud things at night.",
+        "user_id": 4,
+        "neighborhood_id": 3,
+        "rating": 5
+    }
+
+]
