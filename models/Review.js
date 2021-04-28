@@ -30,7 +30,7 @@ Review.init(
     neighborhood_id: {
       type: DataTypes.INTEGER,
       references: {
-        model: "city",
+        model: "neighborhood",
         key: "id",
       },
     },
