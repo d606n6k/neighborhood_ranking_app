@@ -32,9 +32,9 @@ router.post("/login", async (req, res) => {
     if (!isValidPassword) {
       throw new Error("Invalid password");
     }
-    req.session.isLoggedIn = true;
-    req.session.userId = user.id;
     req.session.save((err) => {
+      req.session.isLoggedIn = true;
+      req.session.userId = user.id;
       if (err) {
         console.error(err);
         return res.status(500).json({ message: "Internal server error." });

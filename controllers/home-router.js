@@ -1,6 +1,7 @@
 const router = require("express").Router();
 const sequelize = require("../config/connection");
 const { User, Neighborhood, Review } = require("../models");
+const withAuth = require("../util/withAuth");
 
 // use withAuth middleware to redirect from protected routes.
 // const withAuth = require("../util/withAuth");
@@ -11,10 +12,10 @@ const { User, Neighborhood, Review } = require("../models");
 // });
 
 // Need withAuth
-router.get("/profile", async (req, res) => {
+router.get("/profile", withAuth, async (req, res) => {
   try {
     const userData = await User.findOne({
-      where: { id: 1 }, // need user id upon logging
+      where: { id: req.session.userId }, // need user id upon logging
       attributes: { exclude: ["email", "password"] },
       include: [
         {
@@ -23,10 +24,11 @@ router.get("/profile", async (req, res) => {
         },
       ],
     });
+
     const serializedU = userData.get({ plain: true });
     res.status(200).json(userData);
     console.log(serializedU);
-    // res.render("profile", { user, logged_in: req.session.logged_in });
+    res.render("profile", { userData });
   } catch (err) {
     res.status(500).json(err);
   }
