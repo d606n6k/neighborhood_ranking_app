@@ -1,25 +1,54 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>{{title}}</title>
-  <link rel="stylesheet" href="/css/style.css">
+<html>
+<link>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>{{ title }}</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.2/css/bulma.min.css" />
+<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+  integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+<link rel="stylesheet" href="css/style.css" />
 </head>
-<body>
-    <nav>
-      <a href="/">Home</a>
-      {{#if isLoggedIn}}
-        <button class="btn btn-logout">Log Out</button>
-      {{else}}
-        <a href="/login">login</a>
-        <a href="/signup">signup</a>
-      {{/if}}
-    </nav>
-    {{{body}}}
-    {{#if isLoggedIn}}
-      <script src="/js/logout.js"></script>
-    {{/if}}
+<header class="container is-full">
+  <nav class="navbar has-background-primary" role="navigation" aria-label="main navigation">
+    <div class="navbar-brand"></div>
+    <div id="navbarBasicExample" class="navbar-menu">
+      <div class="navbar-item">
+        <div class="buttons">
+          <a class="button is-primary">
+            <strong>Home</strong>
+          </a>
+        </div>
+      </div>
+      <div class="navbar-end">
+        <div class="navbar-item">
+          {{#if isLoggedIn}}
+          <div class="buttons">
+            <a class="button is-primary">
+              <strong>Profile</strong>
+            </a>
+            <a class="button is-primary">
+              <strong>Log Out</strong>
+            </a>
+          </div>
+          {{else}}
+          <div class="buttons">
+            <a class="button is-primary">
+              <strong>Login / Sign Up</strong>
+            </a>
+          </div>
+          {{/if}}
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<body class="container">
+  {{{ body }}}
 </body>
+<footer class="footer has-background-primary">
+  <div class="content has-text-centered">Neighborhood Watch App</div>
+</footer>
+
 </html>
