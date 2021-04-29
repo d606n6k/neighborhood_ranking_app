@@ -1,5 +1,6 @@
 const router = require("express").Router();
 const { User, Neighborhood, Review } = require("../models");
+const withAuth = require("../util/withAuth");
 
 // use withAuth middleware to redirect from protected routes.
 // const withAuth = require("../util/withAuth");
@@ -10,10 +11,10 @@ const { User, Neighborhood, Review } = require("../models");
 // });
 
 // Need withAuth
-router.get("/profile", async (req, res) => {
+router.get("/profile", withAuth, async (req, res) => {
   try {
     const userData = await User.findOne({
-      where: { id: 1 }, // need user id upon logging
+      where: { id: req.session.userId }, // need user id upon logging
       attributes: { exclude: ["email", "password"] },
       include: [
         {
@@ -23,8 +24,8 @@ router.get("/profile", async (req, res) => {
       ],
     });
     console.log(userData);
-    res.status(200).json(userData);
-    // res.render("profile", { user, logged_in: req.session.logged_in });
+    // res.status(200).json(userData);
+    res.render("profile", { userData });
   } catch (err) {
     res.status(500).json(err);
   }
