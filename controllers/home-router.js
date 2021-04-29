@@ -50,9 +50,8 @@ router.get("/", async (req, res) => {
     const serializedN = neighborhoodData.map((neighborhood) =>
       neighborhood.get({ plain: true })
     );
-    res.status(200).json(neighborhoodData);
     console.log(serializedN);
-    // res.render("homepage", { user, logged_in: req.session.logged_in });
+    res.render("home", { serializedN });
   } catch (err) {
     console.log(err);
     res.status(500).json(err);
