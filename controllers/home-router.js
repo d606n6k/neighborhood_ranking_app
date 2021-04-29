@@ -26,9 +26,7 @@ router.get("/profile", withAuth, async (req, res) => {
     });
 
     const serializedU = userData.get({ plain: true });
-    res.status(200).json(userData);
-    console.log(serializedU);
-    res.render("profile", { userData });
+    res.render("profile", { serializedU });
   } catch (err) {
     res.status(500).json(err);
   }
