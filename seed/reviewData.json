@@ -22,6 +22,18 @@
         "user_id": 4,
         "neighborhood_id": 3,
         "rating": 5
+    },
+    {
+        "content": "My Sister lives here, I'm jealous of this neighborhood...",
+        "user_id": 1,
+        "neighborhood_id": 2,
+        "rating": 5
+    },
+    {
+        "content": "Visited a friend and having a pajama party, no neighborhood issues.",
+        "user_id": 1,
+        "neighborhood_id": 3,
+        "rating": 4
     }
 
 ]
