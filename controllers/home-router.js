@@ -1,4 +1,5 @@
 const router = require("express").Router();
+const sequelize = require("../config/connection");
 const { User, Neighborhood, Review } = require("../models");
 
 // use withAuth middleware to redirect from protected routes.
@@ -22,8 +23,9 @@ router.get("/profile", async (req, res) => {
         },
       ],
     });
-    console.log(userData);
+    const serializedU = userData.get({ plain: true });
     res.status(200).json(userData);
+    console.log(serializedU);
     // res.render("profile", { user, logged_in: req.session.logged_in });
   } catch (err) {
     res.status(500).json(err);
@@ -32,21 +34,28 @@ router.get("/profile", async (req, res) => {
 
 router.get("/", async (req, res) => {
   try {
-    let user;
-    if (req.session.isLoggedIn) {
-      user = await User.findByPk(req.session.userId, {
-        exclude: ["password"],
-        raw: true,
-      });
-    }
-    res.render("home", {
-      title: "Home Page",
-      isLoggedIn: req.session.isLoggedIn,
-      user,
+    const neighborhoodData = await Neighborhood.findAll({
+      include: [{ model: Review }],
+      attributes: {
+        include: [
+          [
+            sequelize.literal(
+              "(SELECT AVG(rating) FROM review WHERE review.neighborhood_id = neighborhood.id)"
+            ),
+            "avgrank",
+          ],
+        ],
+      },
     });
-  } catch (error) {
-    console.error(error);
-    res.status(500).send("⛔ Uh oh! An unexpected error occurred.");
+    const serializedN = neighborhoodData.map((neighborhood) =>
+      neighborhood.get({ plain: true })
+    );
+    res.status(200).json(neighborhoodData);
+    console.log(serializedN);
+    // res.render("homepage", { user, logged_in: req.session.logged_in });
+  } catch (err) {
+    console.log(err);
+    res.status(500).json(err);
   }
 });
 
