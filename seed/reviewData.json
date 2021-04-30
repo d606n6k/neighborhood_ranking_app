@@ -9,31 +9,157 @@
         "content": "Moved in here, last month. All peaceful except the neighbor dogs are grumpy and loud specifically during weekends.",
         "user_id": 2,
         "neighborhood_id": 1,
-        "rating": 3
+        "rating": 2
     },
     {
         "content": "Public park nearby, good for recreational activities.",
         "user_id": 3,
-        "neighborhood_id": 2,
-        "rating": 5
+        "neighborhood_id": 1,
+        "rating": 4
     },
     {
         "content": "Neighbors are friendly, no unnecessary dramas or loud things at night.",
         "user_id": 4,
-        "neighborhood_id": 3,
+        "neighborhood_id": 1,
         "rating": 5
     },
     {
         "content": "My Sister lives here, I'm jealous of this neighborhood...",
-        "user_id": 1,
-        "neighborhood_id": 2,
+        "user_id": 5,
+        "neighborhood_id": 1,
         "rating": 5
     },
     {
         "content": "Visited a friend and having a pajama party, no neighborhood issues.",
+        "user_id": 6,
+        "neighborhood_id": 1,
+        "rating": 5
+    },
+    {
+        "content": "This is my critical review of this neighborhood.",
+        "user_id": 7,
+        "neighborhood_id": 1,
+        "rating": 5
+    },
+    {
+        "content": "Neighbor dogs are freaking loud at night but they're cute though",
+        "user_id": 8,
+        "neighborhood_id": 1,
+        "rating": 3
+    },
+    {
+        "content": "Beach side houses are great!",
+        "user_id": 2,
+        "neighborhood_id": 1,
+        "rating": 5
+    },
+    {
+        "content": "Neighbors here are very friendly, I stayed one week in my friend's apartment",
+        "user_id": 2,
+        "neighborhood_id": 2,
+        "rating": 5
+    },
+    {
+        "content": "Parking is a lot of nightmare, too many people, too congested",
+        "user_id": 3,
+        "neighborhood_id": 2,
+        "rating": 1
+    },
+    {
+        "content": "There's a lot of homeless people in my area, and the smell is unpleasant...",
+        "user_id": 4,
+        "neighborhood_id": 2,
+        "rating": 1
+    },
+    {
+        "content": "My brother works somewhere here and I have to pick him up every MWFs, seems pretty quiet neighborhood.",
+        "user_id": 5,
+        "neighborhood_id": 2,
+        "rating": 4
+    },
+    {
+        "content": "I work somewhere here, pretty nice area to start",
+        "user_id": 6,
+        "neighborhood_id": 2,
+        "rating": 5
+    },
+    {
+        "content": "This is my opinion about this neighborhood",
+        "user_id": 7,
+        "neighborhood_id": 2,
+        "rating": 5
+    },
+    {
+        "content": "Food deliveries, mail services, packages seems to have troubles finding my place...",
+        "user_id": 8,
+        "neighborhood_id": 2,
+        "rating": 1
+    },
+    {
+        "content": "Wow, this place is getting developed... each day",
         "user_id": 1,
         "neighborhood_id": 3,
-        "rating": 4
+        "rating": 5
+    },
+    {
+        "content": "Last month I passed here, it was a barren land, right now, I just drove by and there was a bunch of apartment complexes",
+        "user_id": 8,
+        "neighborhood_id": 3,
+        "rating": 5
+    },
+    {
+        "content": "Seems a nice place to start with...",
+        "user_id": 7,
+        "neighborhood_id": 3,
+        "rating": 5
+    },
+    {
+        "content": "Neighbors parking at all sides, first come first park, until all of them are occupied...",
+        "user_id": 5,
+        "neighborhood_id": 3,
+        "rating": 1
+    },
+    {
+        "content": "I'm living here for 4 years by now, and trust me, its not getting better",
+        "user_id": 4,
+        "neighborhood_id": 3,
+        "rating": 2
+    },
+    {
+        "content": "Concerned by the couple next door's arguing loudly every night... might be moans but Idgf, please someone shut them off",
+        "user_id": 6,
+        "neighborhood_id": 3,
+        "rating": 1
+    },
+    {
+        "content": "There is a public park nearby with a baseball field!",
+        "user_id": 2,
+        "neighborhood_id": 3,
+        "rating": 5
+    },
+    {
+        "content": "Didn't like there was a nearby baseball field",
+        "user_id": 1,
+        "neighborhood_id": 3,
+        "rating": 2
+    },
+    {
+        "content": "This is my review for this neighborhood.",
+        "user_id": 8,
+        "neighborhood_id": 4,
+        "rating": 5
+    },
+    {
+        "content": "This is my review for this neighborhood.",
+        "user_id": 8,
+        "neighborhood_id": 5,
+        "rating": 5
+    },
+    {
+        "content": "This is my review for this neighborhood.",
+        "user_id": 8,
+        "neighborhood_id": 6,
+        "rating": 5
     }
 
 ]
