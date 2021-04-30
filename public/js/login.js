@@ -2,8 +2,8 @@
 const handleLoginSubmit = async (event) => {
   event.preventDefault();
   try {
-    const username = document.querySelector("#username").value.trim();
-    const password = document.querySelector("#password").value.trim();
+    const username = document.querySelector("#username-login").value.trim();
+    const password = document.querySelector("#password-login").value.trim();
 
     if (!username || !password) {
       alert("You must provide a username and password.");
