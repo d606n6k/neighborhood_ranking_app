@@ -35,7 +35,17 @@ router.get("/profile", withAuth, async (req, res) => {
 router.get("/", async (req, res) => {
   try {
     const neighborhoodData = await Neighborhood.findAll({
-      include: [{ model: Review }],
+      include: [
+        {
+          model: Review,
+          include: [
+            {
+              model: User,
+              attributes: { exclude: ["password"] },
+            },
+          ],
+        },
+      ],
       attributes: {
         include: [
           [

@@ -11,7 +11,9 @@
               <i class="fas fa-star"></i>
             </span>
           </h2>
-          <p>Comments: {{Review.content}}</p>
+          {{#each neighborhood.reviews as |reviews|}}
+          <p><b>Reviews:</b> {{reviews.content}}</p>
+          {{/each}}
         </div>
       </div>
     </section>
