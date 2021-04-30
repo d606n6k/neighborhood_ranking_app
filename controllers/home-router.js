@@ -44,6 +44,7 @@ router.get("/", async (req, res) => {
               attributes: { exclude: ["password"] },
             },
           ],
+          order: '"post_time" DESC',
         },
       ],
       attributes: {
