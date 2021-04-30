@@ -26,7 +26,7 @@ router.get("/profile", withAuth, async (req, res) => {
     });
 
     const serializedU = userData.get({ plain: true });
-    res.render("profile", { serializedU });
+    res.render("profile", { serializedU, isLoggedIn: req.session.isLoggedIn });
   } catch (err) {
     res.status(500).json(err);
   }
@@ -51,7 +51,7 @@ router.get("/", async (req, res) => {
       neighborhood.get({ plain: true })
     );
     console.log(serializedN);
-    res.render("home", { serializedN });
+    res.render("home", { serializedN, isLoggedIn: req.session.isLoggedIn });
   } catch (err) {
     console.log(err);
     res.status(500).json(err);
