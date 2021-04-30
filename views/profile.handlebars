@@ -1,6 +1,6 @@
 <h1 class='title'>Your ratings:</h1>
 <main class="columns">
-
+{{!-- {{#each }} --}}
   <section class="column">
     <div class="card column mt-5 has-background-success-light min-width-">
       <div class="card-content">
@@ -12,10 +12,11 @@
           </span>
         </h2>
         <p>Comments: I encountered a very rude pigeon while walking around who thought he owned the whole street.</p>
+        <a href="/neighborhoods/"></a>
       </div>
     </div>
   </section>
-  <section class="column">
+  {{!-- <section class="column">
     <div class="card column mt-5 has-background-success-light min-width-">
       <div class="card-content">
         <div class="title">San Ysidro</div>
@@ -34,8 +35,8 @@
         <p>Comments: Had a great time today, I rode the trolley for the first time!</p>
       </div>
     </div>
-  </section>
-  <section class="column">
+  </section> --}}
+  {{!-- <section class="column">
     <div class="card column mt-5 has-background-success-light min-width-">
       <div class="card-content">
         <div class="title">North Park</div>
@@ -65,6 +66,8 @@
         <p>Comments: Today was a chill day at the beach. Watched the sunset while feeding some seagulls.</p>
       </div>
     </div>
-  </section>
-
+  </section> --}}
+ {{#if isLoggedIn}}
+  <script src="/js/logout.js"></script>
+  {{/if}}
 </main>
