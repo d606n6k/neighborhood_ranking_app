@@ -15,7 +15,7 @@ const withAuth = require("../util/withAuth");
 router.get("/profile", withAuth, async (req, res) => {
   try {
     const userData = await User.findOne({
-      where: { id: req.session.userId }, // need user id upon logging
+      where: { id: req.session.userId },
       attributes: { exclude: ["email", "password"] },
       include: [
         {
