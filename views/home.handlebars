@@ -1,25 +1,28 @@
-{{#each serializedN as |neighborhood| }}
 <div class="columns">
   <section class="columns is-6">
     <section class="column">
+
+      {{#each serializedN as |neighborhood| }}
       <div class="card column mt-5 has-background-success-light min-width-">
         <div class="card-content">
           <div class="title">{{neighborhood.neighborhood_name}}</div>
-          <h2 class="content">Your rating: <span class="icon">
+          <h2 class="content">Average rating: <span class="icon">
               <i class="fas fa-star"></i>
             </span><span class="icon">
               <i class="fas fa-star"></i>
             </span>
           </h2>
-          {{#each neighborhood.reviews as |reviews|}}
-          <p><b>Reviews:</b> {{reviews.content}}</p>
+          {{#each reviews}}
+
+          <p>Comments: {{this.content}}</p>
           {{/each}}
         </div>
       </div>
+      {{/each}}
+
     </section>
   </section>
-  {{/each}}
-  {{!-- <section class="column is-6">
+  <section class="column is-6">
     <div class="card column has-background-success-light">
       <div class="card-content">
         <div>
@@ -39,4 +42,4 @@
     </div>
 
   </section>
-</div> --}}
+</div>
