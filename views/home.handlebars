@@ -6,13 +6,16 @@
       <div class="card column mt-5 has-background-success-light min-width-">
         <div class="card-content">
           <div class="title">{{neighborhood.neighborhood_name}}</div>
-          <h2 class="content">Your rating: <span class="icon">
+          <h2 class="content">Average rating: <span class="icon">
               <i class="fas fa-star"></i>
             </span><span class="icon">
               <i class="fas fa-star"></i>
             </span>
           </h2>
-          <p>Comments: {{Review.content}}</p>
+          {{#each reviews}}
+
+          <p>Comments: {{this.content}}</p>
+          {{/each}}
         </div>
       </div>
       {{/each}}
