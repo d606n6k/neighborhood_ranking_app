@@ -24,10 +24,10 @@
         <div class="navbar-item">
           {{#if isLoggedIn}}
           <div class="buttons">
-            <a class="button is-primary">
+            <a href="/profile" class="button is-primary">
               <strong>Profile</strong>
             </a>
-            <a class="button is-primary">
+            <a class="button is-primary btn-logout">
               <strong>Log Out</strong>
             </a>
           </div>
@@ -49,5 +49,7 @@
 <footer class="footer has-background-primary">
   <div class="content has-text-centered">Neighborhood Watch App</div>
 </footer>
-
+ {{#if isLoggedIn}}
+  <script src="/js/logout.js"></script>
+  {{/if}}
 </html>
