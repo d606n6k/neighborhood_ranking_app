@@ -1,21 +1,24 @@
-<h1 class='title'>Your ratings:</h1>
+<h1 class='title'>Hello, user <i>{{serializedU.username}}</i> on <i>`{{serializedU.email}}`</i></h1>
 <main class="columns">
-{{!-- {{#each }} --}}
+
+  {{#each serializedU.reviews}}
   <section class="column">
     <div class="card column mt-5 has-background-success-light min-width-">
       <div class="card-content">
-        <div class="title">Ocean Beach</div>
-        <h2 class="content">Your rating: <span class="icon">
+        <div class="title">{{this.neighborhood.neighborhood_name}}</div>
+        <h2 class="content"><b>Your rating:</b> {{this.rating}}<span class="icon">
             <i class="fas fa-star"></i>
           </span><span class="icon">
             <i class="fas fa-star"></i>
           </span>
         </h2>
-        <p>Comments: I encountered a very rude pigeon while walking around who thought he owned the whole street.</p>
+        <p><b>Review:</b> {{this.content}}</p>
+        <p><b>Post time:</b> {{this.post_time}}</p>
         <a href="/neighborhoods/"></a>
       </div>
     </div>
   </section>
+  {{/each}}
   {{!-- <section class="column">
     <div class="card column mt-5 has-background-success-light min-width-">
       <div class="card-content">
@@ -67,7 +70,7 @@
       </div>
     </div>
   </section> --}}
- {{#if isLoggedIn}}
+  {{#if isLoggedIn}}
   <script src="/js/logout.js"></script>
   {{/if}}
 </main>
