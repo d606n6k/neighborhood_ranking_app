@@ -16,7 +16,7 @@ router.get("/profile", withAuth, async (req, res) => {
   try {
     const userData = await User.findOne({
       where: { id: req.session.userId }, // need user id upon logging
-      attributes: { exclude: ["email", "password"] },
+      attributes: { exclude: ["password"] },
       include: [
         {
           model: Review,
@@ -24,7 +24,6 @@ router.get("/profile", withAuth, async (req, res) => {
         },
       ],
     });
-
     const serializedU = userData.get({ plain: true });
     res.render("profile", { serializedU, isLoggedIn: req.session.isLoggedIn });
   } catch (err) {
