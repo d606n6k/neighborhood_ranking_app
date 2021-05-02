@@ -60,7 +60,6 @@ router.get("/", async (req, res) => {
     const serializedN = neighborhoodData.map((neighborhood) =>
       neighborhood.get({ plain: true })
     );
-    console.log(serializedN);
     res.render("home", { serializedN, isLoggedIn: req.session.isLoggedIn });
   } catch (err) {
     console.log(err);

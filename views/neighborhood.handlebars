@@ -1,1 +1,26 @@
-<h2>Hello World!</h2>
+<p class='title'><i>{{neighborhoodSerialized.neighborhood_name}}</i></p>
+<p class='title'>Average ratings: <i>`{{neighborhoodSerialized.avgrank}}`</i></p>
+
+<div class="rows">
+    {{#each neighborhoodSerialized.reviews}}
+    <section class="column">
+        <div class="card column mt-5 has-background-success-light min-width-">
+            <div class="card-content">
+                <div class="title">{{this.neighborhood.neighborhood_name}}</div>
+                <h2 class="content"><b>By {{this.user.username}}:</b> {{this.rating}}<span class="icon">
+                        <i class="fas fa-star"></i>
+                    </span><span class="icon">
+                        <i class="fas fa-star"></i>
+                    </span>
+                </h2>
+                <p><b>Review:</b> {{this.content}}</p>
+                <p><b>Post time:</b> {{this.post_time}}</p>
+            </div>
+        </div>
+    </section>
+    {{/each}}
+
+    {{#if isLoggedIn}}
+    <script src="/js/logout.js"></script>
+    {{/if}}
+</div>
