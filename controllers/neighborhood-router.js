@@ -21,11 +21,26 @@ router.get("/:id", async (req, res) => {
       include: [
         {
           model: Review,
-          include: [{ model: Neighborhood }],
+          include: [
+            {
+              model: User,
+              attributes: { exclude: ["password"] },
+            },
+          ],
+          order: '"post_time" DESC',
         },
       ],
+      attributes: {
+        include: [
+          [
+            sequelize.literal(
+              "(SELECT AVG(rating) FROM review WHERE review.neighborhood_id = neighborhood.id)"
+            ),
+            "avgrank",
+          ],
+        ],
+      },
     });
-
     const neighborhoodSerialized = neighborHood.get({ plain: true });
     res.render("neighborhood", {
       neighborhoodSerialized,
