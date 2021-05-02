@@ -1,20 +1,20 @@
+<link rel="stylesheet" href="css/homebtn.css" />
 <div class="columns">
   <section class="columns is-6">
     <section class="column">
 
-      {{#each serializedN as |neighborhood| }}
+      {{#each serializedN}}
       <div class="card column mt-5 has-background-success-light min-width-">
         <div class="card-content">
-          <div class="title">{{neighborhood.neighborhood_name}}</div>
-          <h2 class="content">Average rating: <span class="icon">
+          <div class="title"><a href="neighborhood/{{{this.id}}}">{{this.neighborhood_name}}</a></div>
+          <h2 class="content"><b>Average rating:</b> {{this.avgrank}}<span class="icon">
               <i class="fas fa-star"></i>
             </span><span class="icon">
               <i class="fas fa-star"></i>
             </span>
           </h2>
           {{#each reviews}}
-
-          <p>Comments: {{this.content}}</p>
+          <p><b>Reviews:</b> {{this.content}}</p>
           {{/each}}
         </div>
       </div>

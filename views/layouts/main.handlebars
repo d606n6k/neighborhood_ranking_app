@@ -7,7 +7,8 @@
 <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
   integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
 <link rel="stylesheet" href="css/style.css" />
-<script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+  crossorigin="anonymous"></script>
 <script src="/js/bulmascript.js"></script>
 </head>
 <header>
@@ -22,7 +23,7 @@
     <div id="navbar-menu" class="navbar-menu">
       <div class="navbar-item">
         <div class="buttons">
-          <a class="button is-primary" href="/">
+          <a href="/" class="button is-primary" id="home">
             <strong>Home</strong>
           </a>
         </div>
@@ -31,7 +32,7 @@
         <div class="navbar-item">
           {{#if isLoggedIn}}
           <div class="buttons">
-            <a href="/profile" class="button is-primary">
+            <a href="/profile" class="button is-primary" id="profile">
               <strong>Profile</strong>
             </a>
             <a class="button is-primary btn-logout">
