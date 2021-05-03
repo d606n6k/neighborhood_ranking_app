@@ -8,9 +8,11 @@
   <section class="column">
     <div class="card column mt-5 has-background-success-light min-width-">
       <div class="card-content">
-        <div class="title"><a href="neighborhood/{{{this.neighborhood_id}}}">{{this.neighborhood.neighborhood_name}}</a>
+        <div class="title">
+          <a href="neighborhood/{{{this.neighborhood_id}}}">{{this.neighborhood.neighborhood_name}}</a>
         </div>
-        <h2 class="content"><b>Your rating:</b> {{this.rating}}<span class="icon">
+        <h2 class="content"><b>Your rating:</b> {{this.rating}}
+          <span class="icon">
             <i class="fas fa-star"></i>
           </span><span class="icon">
             <i class="fas fa-star"></i>
@@ -23,8 +25,4 @@
     </div>
   </section>
   {{/each}}
-
-  {{#if isLoggedIn}}
-  <script src="/js/logout.js"></script>
-  {{/if}}
 </div>
