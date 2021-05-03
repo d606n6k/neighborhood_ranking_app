@@ -20,3 +20,11 @@
   min-width: 288px;
   min-height: 237px;
 }
+
+.profile-title {
+  padding: 20px;
+}
+
+.profile-username {
+  font-weight: 700;
+}
