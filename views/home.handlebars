@@ -7,12 +7,7 @@
       <div class="card column mt-5 has-background-success-light min-width-">
         <div class="card-content">
           <div class="title"><a href="neighborhood/{{{this.id}}}">{{this.neighborhood_name}}</a></div>
-          <h2 class="content"><b>Average rating:</b> {{this.avgrank}}<span class="icon">
-              <i class="fas fa-star"></i>
-            </span><span class="icon">
-              <i class="fas fa-star"></i>
-            </span>
-          </h2>
+          <h2 class="content"><b>Average rating:</b> {{ format_stars avgrank }} </h2>
           {{#each reviews}}
           <p><b>Reviews:</b> {{this.content}}</p>
           {{/each}}
