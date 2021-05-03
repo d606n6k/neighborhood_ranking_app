@@ -6,12 +6,7 @@
       <div class="card column mt-5 has-background-success-light min-width-">
         <div class="card-content">
           <div class="title"><a href="neighborhood/{{{this.id}}}">{{this.neighborhood_name}}</a></div>
-          <h2 class="content"><b>Average rating:</b> {{this.avgrank}}<span class="icon">
-              <i class="fas fa-star"></i>
-            </span><span class="icon">
-              <i class="fas fa-star"></i>
-            </span>
-          </h2>
+          {{!-- <h2 class="content"><b>Average rating:</b> {{ format_stars avgrank }} </h2> --}}
           {{#each reviews}}
           <p><b>Reviews:</b> {{this.content}}</p>
           {{/each}}
@@ -26,7 +21,7 @@
       <div class="card-content">
         <div class="is-flex is-align-items-center is-justify-content-center ">
           <!-- Image SRC goes here -->
-          <img src="https://picsum.photos/600/300" />
+          <img src="https://picsum.photos/1200/300" />
         </div>
         <div class="mt-3">
           <p>Average Safety Rating: <span class='fas fa-star'></span><span class='fas fa-star'></span><span

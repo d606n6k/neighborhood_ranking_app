@@ -55,3 +55,10 @@
   background: #f90;
   color: #fff;
 }
+.profile-title {
+  padding: 20px;
+}
+
+.profile-username {
+  font-weight: 700;
+}
