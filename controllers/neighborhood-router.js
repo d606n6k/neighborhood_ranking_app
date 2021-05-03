@@ -18,6 +18,7 @@ router.get("/:id", async (req, res) => {
       where: {
         id: req.params.id,
       },
+      order: [[Review, "post_time", "DESC"]],
       include: [
         {
           model: Review,
@@ -27,7 +28,6 @@ router.get("/:id", async (req, res) => {
               attributes: { exclude: ["password"] },
             },
           ],
-          order: '"post_time" DESC',
         },
       ],
       attributes: {
